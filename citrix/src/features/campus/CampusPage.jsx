@@ -44,13 +44,13 @@ export default function CampusPage() {
   };
 
   return (
-    <div className="h-[calc(100vh-8rem)] flex flex-col rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 relative shadow-2xl">
+    <div className="h-[calc(100vh-8rem)] flex flex-col rounded-2xl overflow-hidden border border-[#1F2420] bg-[#080A09] relative shadow-2xl">
       {/* Top Campus Control Bar */}
-      <div className="h-14 border-b border-slate-800/80 bg-slate-900/90 backdrop-blur-md px-4 flex items-center justify-between z-20">
+      <div className="h-14 border-b border-[#1F2420] bg-[#080A09]/95 backdrop-blur-md px-4 flex items-center justify-between z-20">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2">
-            <Boxes className="w-5 h-5 text-blue-400" />
-            <h2 className="font-bold text-sm sm:text-base text-slate-100">
+            <Boxes className="w-5 h-5 text-[#B8F36B]" />
+            <h2 className="font-bold text-sm sm:text-base text-white">
               Interactive CIT Campus
             </h2>
           </div>
@@ -61,23 +61,23 @@ export default function CampusPage() {
 
         {/* View Mode Toggle & Status Filter */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <div className="flex items-center bg-slate-800/90 p-1 rounded-xl border border-slate-700/60">
+          <div className="flex items-center bg-[#121614] p-1 rounded-xl border border-[#1F2420]">
             <button
               onClick={() => setViewMode('3d')}
-              className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
+              className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
                 viewMode === '3d'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-[#B8F36B] text-[#101110] font-black shadow-md shadow-[#B8F36B]/20'
+                  : 'text-[#9AA19C] hover:text-white'
               }`}
             >
               3D Campus
             </button>
             <button
               onClick={() => setViewMode('2d')}
-              className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
+              className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
                 viewMode === '2d'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-[#B8F36B] text-[#101110] font-black shadow-md shadow-[#B8F36B]/20'
+                  : 'text-[#9AA19C] hover:text-white'
               }`}
             >
               2D Plan
@@ -120,31 +120,31 @@ export default function CampusPage() {
 
         {/* Selected Building Details Drawer */}
         {selectedBuilding && (
-          <div className="absolute top-4 right-4 bottom-4 w-80 sm:w-96 bg-slate-900/95 border border-slate-700/80 rounded-2xl shadow-2xl backdrop-blur-xl z-30 flex flex-col overflow-hidden animate-slide-in-right">
+          <div className="absolute top-4 right-4 bottom-4 w-80 sm:w-96 bg-[#080A09]/95 border border-[#1F2420] rounded-2xl shadow-2xl backdrop-blur-xl z-30 flex flex-col overflow-hidden animate-slide-in-right">
             {/* Drawer Header */}
-            <div className="p-4 border-b border-slate-800 bg-slate-900 flex items-start justify-between">
+            <div className="p-4 border-b border-[#1F2420] bg-[#121614] flex items-start justify-between">
               <div>
                 <div className="flex items-center gap-2">
                   <span className="text-xl">{selectedBuilding.icon}</span>
-                  <h3 className="font-bold text-base text-slate-100">
+                  <h3 className="font-bold text-base text-white">
                     {selectedBuilding.name}
                   </h3>
                 </div>
-                <p className="text-xs text-slate-400 mt-1">
+                <p className="text-xs text-[#9AA19C] mt-1">
                   Departments: {selectedBuilding.dept}
                 </p>
               </div>
               <button
                 onClick={() => setSelectedBuilding(null)}
-                className="p-1 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg"
+                className="p-1 text-[#9AA19C] hover:text-white hover:bg-[#161B18] rounded-lg transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
             {/* Floor Selector Tabs */}
-            <div className="p-4 border-b border-slate-800 bg-slate-950/40">
-              <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">
+            <div className="p-4 border-b border-[#1F2420] bg-[#121614]/40">
+              <label className="text-xs font-semibold text-[#9AA19C] uppercase tracking-wider block mb-2 font-mono">
                 Select Floor to Inspect
               </label>
               <div className="flex gap-2 overflow-x-auto pb-1">
@@ -154,8 +154,8 @@ export default function CampusPage() {
                     onClick={() => setActiveFloor(floor)}
                     className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                       activeFloor === floor
-                        ? 'bg-blue-600 text-white shadow-md shadow-blue-600/30'
-                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                        ? 'bg-[#B8F36B] text-[#101110] font-black shadow-md shadow-[#B8F36B]/20'
+                        : 'bg-[#161B18] text-[#9AA19C] hover:text-white hover:bg-[#1F2420]'
                     }`}
                   >
                     Floor {floor}
@@ -164,7 +164,7 @@ export default function CampusPage() {
               </div>
 
               <Button
-                variant="teal"
+                variant="primary"
                 size="sm"
                 className="w-full mt-3 text-xs"
                 onClick={() => handleEnterFloor(activeFloor)}
@@ -176,11 +176,11 @@ export default function CampusPage() {
 
             {/* Rooms list on this floor */}
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-2">
+              <div className="flex items-center justify-between text-xs text-[#9AA19C] mb-2 font-mono">
                 <span className="font-semibold uppercase tracking-wider">
                   Rooms on Floor {activeFloor}
                 </span>
-                <span className="text-slate-500">
+                <span className="text-[#777D78]">
                   {
                     buildingRooms.filter((r) => r.floor === activeFloor).length
                   } total
@@ -188,7 +188,7 @@ export default function CampusPage() {
               </div>
 
               {buildingRooms.filter((r) => r.floor === activeFloor).length === 0 ? (
-                <div className="text-center py-6 text-xs text-slate-500">
+                <div className="text-center py-6 text-xs text-[#777D78]">
                   No classroom records on this level
                 </div>
               ) : (
@@ -202,19 +202,19 @@ export default function CampusPage() {
                           `/campus/${selectedBuilding.id}/floor/${room.floor}/room/${room.id}`
                         )
                       }
-                      className="p-3 rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-600 cursor-pointer transition-all flex items-center justify-between group"
+                      className="p-3 rounded-xl bg-[#121614] hover:bg-[#161B18] border border-[#1F2420] hover:border-[#B8F36B]/40 cursor-pointer transition-all flex items-center justify-between group"
                     >
                       <div>
-                        <div className="font-bold text-xs text-slate-200 group-hover:text-blue-400 transition-colors">
+                        <div className="font-bold text-xs text-slate-200 group-hover:text-[#B8F36B] transition-colors">
                           {room.name}
                         </div>
-                        <div className="text-[11px] text-slate-400 mt-0.5">
+                        <div className="text-[11px] text-[#9AA19C] mt-0.5">
                           {room.type} • {room.capacity} seats
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
                         <StatusBadge status={room.status} />
-                        <ChevronRight className="w-4 h-4 text-slate-500 group-hover:text-slate-300 group-hover:translate-x-0.5 transition-transform" />
+                        <ChevronRight className="w-4 h-4 text-[#777D78] group-hover:text-[#B8F36B] group-hover:translate-x-0.5 transition-transform" />
                       </div>
                     </div>
                   ))
@@ -222,29 +222,29 @@ export default function CampusPage() {
             </div>
 
             {/* Footer with hint */}
-            <div className="p-3 bg-slate-950/80 border-t border-slate-800 text-[11px] text-slate-400 flex items-center gap-2">
-              <Info className="w-4 h-4 text-blue-400 shrink-0" />
+            <div className="p-3 bg-[#080A09] border-t border-[#1F2420] text-[11px] text-[#9AA19C] flex items-center gap-2">
+              <Info className="w-4 h-4 text-[#B8F36B] shrink-0" />
               <span>Click any classroom to see live timetable and booking slots</span>
             </div>
           </div>
         )}
 
         {/* Legend Overlay at bottom-left */}
-        <div className="absolute bottom-4 left-4 bg-slate-900/90 border border-slate-800 rounded-xl px-3 py-2 backdrop-blur-md shadow-lg z-20 flex items-center gap-3 text-xs text-slate-300">
-          <span className="font-semibold text-slate-400 text-[11px] uppercase tracking-wider">
+        <div className="absolute bottom-4 left-4 bg-[#121614]/95 border border-[#1F2420] rounded-xl px-3 py-2 backdrop-blur-md shadow-lg z-20 flex items-center gap-3 text-xs text-slate-300">
+          <span className="font-semibold text-[#9AA19C] text-[11px] uppercase tracking-wider font-mono">
             Legend:
           </span>
           <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-            <span>Available</span>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#B8F36B]" />
+            <span className="text-slate-200">Available</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
-            <span>Occupied</span>
+            <span className="w-2.5 h-2.5 rounded-full bg-rose-500" />
+            <span className="text-slate-200">Occupied</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-            <span>Partial</span>
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+            <span className="text-slate-200">Partial</span>
           </div>
         </div>
       </div>

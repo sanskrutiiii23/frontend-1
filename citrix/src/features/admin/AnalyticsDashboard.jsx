@@ -106,19 +106,19 @@ export default function AnalyticsDashboard() {
           <div className="h-64 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={ANALYTICS.roomUtilisation}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                <XAxis dataKey="name" stroke="#64748b" fontSize={11} />
-                <YAxis stroke="#64748b" fontSize={11} domain={[0, 100]} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#1F2420" />
+                <XAxis dataKey="name" stroke="#777D78" fontSize={11} />
+                <YAxis stroke="#777D78" fontSize={11} domain={[0, 100]} />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: '#090E1A',
-                    borderColor: '#1E293B',
+                    backgroundColor: '#121614',
+                    borderColor: '#1F2420',
                     borderRadius: '12px',
                     fontSize: '12px',
-                    color: '#F8FAFC',
+                    color: '#FFFFFF',
                   }}
                 />
-                <Bar dataKey="utilisation" fill="#6366F1" radius={[6, 6, 0, 0]} />
+                <Bar dataKey="utilisation" fill="#B8F36B" radius={[6, 6, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -130,7 +130,7 @@ export default function AnalyticsDashboard() {
             <h3 className="font-bold text-sm text-slate-100 mb-1">
               Curricular Session Types
             </h3>
-            <p className="text-xs text-slate-400 mb-3">189 Total Weekly Hours</p>
+            <p className="text-xs text-[#9AA19C] mb-3">189 Total Weekly Hours</p>
 
             <div className="h-44 w-full">
               <ResponsiveContainer width="100%" height="100%">
@@ -148,17 +148,18 @@ export default function AnalyticsDashboard() {
                   </Pie>
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#0f172a',
-                      borderColor: '#334155',
+                      backgroundColor: '#121614',
+                      borderColor: '#1F2420',
                       borderRadius: '8px',
                       fontSize: '12px',
+                      color: '#FFFFFF',
                     }}
                   />
                 </PieChart>
               </ResponsiveContainer>
             </div>
 
-            <div className="space-y-1.5 pt-2 border-t border-slate-800 text-xs">
+            <div className="space-y-1.5 pt-2 border-t border-[#1F2420] text-xs">
               {ANALYTICS.sessionTypes.map((t) => (
                 <div key={t.name} className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
@@ -182,28 +183,28 @@ export default function AnalyticsDashboard() {
           <h3 className="font-bold text-sm text-slate-100 mb-1">
             Weekly Daily Load Trend
           </h3>
-          <p className="text-xs text-slate-400 mb-4">Hours scheduled per weekday</p>
+          <p className="text-xs text-[#9AA19C] mb-4">Hours scheduled per weekday</p>
           <div className="h-56 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={ANALYTICS.weeklyLoad}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                <XAxis dataKey="day" stroke="#64748b" fontSize={11} />
-                <YAxis stroke="#64748b" fontSize={11} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#1F2420" />
+                <XAxis dataKey="day" stroke="#777D78" fontSize={11} />
+                <YAxis stroke="#777D78" fontSize={11} />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: '#090E1A',
-                    borderColor: '#1E293B',
+                    backgroundColor: '#121614',
+                    borderColor: '#1F2420',
                     borderRadius: '12px',
                     fontSize: '12px',
-                    color: '#F8FAFC',
+                    color: '#FFFFFF',
                   }}
                 />
                 <Area
                   type="monotone"
                   dataKey="utilisation"
-                  stroke="#06B6D4"
-                  fill="#06B6D4"
-                  fillOpacity={0.25}
+                  stroke="#B8F36B"
+                  fill="#B8F36B"
+                  fillOpacity={0.2}
                 />
               </AreaChart>
             </ResponsiveContainer>
@@ -214,30 +215,30 @@ export default function AnalyticsDashboard() {
           <h3 className="font-bold text-sm text-slate-100 mb-1">
             Scheduling Conflict Reduction
           </h3>
-          <p className="text-xs text-slate-400 mb-4">
+          <p className="text-xs text-[#9AA19C] mb-4">
             Conflicts detected vs iterations solved
           </p>
           <div className="h-56 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={ANALYTICS.conflictTrend}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                <XAxis dataKey="week" stroke="#64748b" fontSize={11} />
-                <YAxis stroke="#64748b" fontSize={11} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#1F2420" />
+                <XAxis dataKey="week" stroke="#777D78" fontSize={11} />
+                <YAxis stroke="#777D78" fontSize={11} />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: '#090E1A',
-                    borderColor: '#1E293B',
+                    backgroundColor: '#121614',
+                    borderColor: '#1F2420',
                     borderRadius: '12px',
                     fontSize: '12px',
-                    color: '#F8FAFC',
+                    color: '#FFFFFF',
                   }}
                 />
                 <Line
                   type="monotone"
                   dataKey="conflicts"
-                  stroke="#F43F5E"
+                  stroke="#B8F36B"
                   strokeWidth={2.5}
-                  dot={{ fill: '#F43F5E', r: 4 }}
+                  dot={{ fill: '#B8F36B', r: 4 }}
                 />
               </LineChart>
             </ResponsiveContainer>

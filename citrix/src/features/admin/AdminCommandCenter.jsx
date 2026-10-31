@@ -115,89 +115,89 @@ export default function AdminCommandCenter() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {/* KPI 1 */}
         <Card className="p-4 flex flex-col justify-between">
-          <div className="flex items-center justify-between text-xs text-slate-400">
-            <span className="font-semibold uppercase tracking-wider">Campus Venues</span>
-            <Building2 className="w-4 h-4 text-blue-400" />
+          <div className="flex items-center justify-between text-xs text-[#9AA19C]">
+            <span className="font-semibold uppercase tracking-wider font-mono">Campus Venues</span>
+            <Building2 className="w-4 h-4 text-[#B8F36B]" />
           </div>
           <div className="my-2">
-            <div className="text-2xl font-black text-slate-100">{totalRooms} Rooms</div>
-            <div className="text-xs text-emerald-400 font-medium mt-1">
+            <div className="text-2xl font-black text-white">{totalRooms} Rooms</div>
+            <div className="text-xs text-[#B8F36B] font-semibold mt-1">
               {availableRooms} Available • {occupiedRooms} Occupied
             </div>
           </div>
-          <div className="text-[11px] text-slate-500 pt-2 border-t border-slate-800">
+          <div className="text-[11px] text-[#777D78] pt-2 border-t border-[#1F2420]">
             {partialRooms} partially occupied
           </div>
         </Card>
 
         {/* KPI 2 */}
         <Card className="p-4 flex flex-col justify-between">
-          <div className="flex items-center justify-between text-xs text-slate-400">
-            <span className="font-semibold uppercase tracking-wider">Active Sessions</span>
-            <CalendarDays className="w-4 h-4 text-teal-400" />
+          <div className="flex items-center justify-between text-xs text-[#9AA19C]">
+            <span className="font-semibold uppercase tracking-wider font-mono">Active Sessions</span>
+            <CalendarDays className="w-4 h-4 text-[#10B981]" />
           </div>
           <div className="my-2">
-            <div className="text-2xl font-black text-slate-100">189 Sessions</div>
-            <div className="text-xs text-teal-400 font-medium mt-1">
+            <div className="text-2xl font-black text-white">189 Sessions</div>
+            <div className="text-xs text-[#B8F36B] font-semibold mt-1">
               100% Scheduled by Solver
             </div>
           </div>
-          <div className="text-[11px] text-slate-500 pt-2 border-t border-slate-800">
+          <div className="text-[11px] text-[#777D78] pt-2 border-t border-[#1F2420]">
             14 Student Groups • 62 Courses
           </div>
         </Card>
 
         {/* KPI 3 */}
         <Card className="p-4 flex flex-col justify-between">
-          <div className="flex items-center justify-between text-xs text-slate-400">
-            <span className="font-semibold uppercase tracking-wider">Pending Approvals</span>
-            <FileCheck2 className="w-4 h-4 text-purple-400" />
+          <div className="flex items-center justify-between text-xs text-[#9AA19C]">
+            <span className="font-semibold uppercase tracking-wider font-mono">Pending Approvals</span>
+            <FileCheck2 className="w-4 h-4 text-amber-400" />
           </div>
           <div className="my-2">
-            <div className="text-2xl font-black text-purple-400">
+            <div className="text-2xl font-black text-amber-400">
               {pendingSpectra + 2} Requests
             </div>
-            <div className="text-xs text-slate-400 mt-1">
+            <div className="text-xs text-[#9AA19C] mt-1">
               {pendingSpectra} Spectra • 2 Regular
             </div>
           </div>
-          <div className="text-[11px] text-slate-500 pt-2 border-t border-slate-800">
+          <div className="text-[11px] text-[#777D78] pt-2 border-t border-[#1F2420]">
             Requires Dean Authorization
           </div>
         </Card>
 
         {/* KPI 4 */}
-        <Card className="p-4 flex flex-col justify-between border-red-500/30 bg-red-950/10">
-          <div className="flex items-center justify-between text-xs text-red-400">
-            <span className="font-semibold uppercase tracking-wider">Conflicts Detected</span>
-            <AlertTriangle className="w-4 h-4 text-red-400" />
+        <Card className="p-4 flex flex-col justify-between border-rose-500/30 bg-rose-950/15">
+          <div className="flex items-center justify-between text-xs text-rose-400">
+            <span className="font-semibold uppercase tracking-wider font-mono">Conflicts Detected</span>
+            <AlertTriangle className="w-4 h-4 text-rose-400" />
           </div>
           <div className="my-2">
-            <div className="text-2xl font-black text-red-400">{conflictsCount} Clashes</div>
-            <div className="text-xs text-red-300 mt-1">
+            <div className="text-2xl font-black text-rose-400">{conflictsCount} Clashes</div>
+            <div className="text-xs text-rose-300 mt-1">
               Midsem Exam Venue Overlap
             </div>
           </div>
-          <div className="text-[11px] text-slate-500 pt-2 border-t border-slate-800">
+          <div className="text-[11px] text-[#777D78] pt-2 border-t border-[#1F2420]">
             Room SH-1 (Nov 25)
           </div>
         </Card>
 
         {/* KPI 5 */}
         <Card className="p-4 flex flex-col justify-between">
-          <div className="flex items-center justify-between text-xs text-slate-400">
-            <span className="font-semibold uppercase tracking-wider">Faculty Active</span>
-            <Users className="w-4 h-4 text-blue-400" />
+          <div className="flex items-center justify-between text-xs text-[#9AA19C]">
+            <span className="font-semibold uppercase tracking-wider font-mono">Faculty Active</span>
+            <Users className="w-4 h-4 text-[#B8F36B]" />
           </div>
           <div className="my-2">
-            <div className="text-2xl font-black text-slate-100">
+            <div className="text-2xl font-black text-white">
               {availableFaculty}/{totalFaculty}
             </div>
-            <div className="text-xs text-emerald-400 mt-1">
+            <div className="text-xs text-[#B8F36B] font-semibold mt-1">
               {Math.round((availableFaculty / totalFaculty) * 100)}% Available Today
             </div>
           </div>
-          <div className="text-[11px] text-slate-500 pt-2 border-t border-slate-800">
+          <div className="text-[11px] text-[#777D78] pt-2 border-t border-[#1F2420]">
             {totalFaculty - availableFaculty} on conference/leave
           </div>
         </Card>
@@ -289,24 +289,24 @@ export default function AdminCommandCenter() {
             <div className="h-52 w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={ANALYTICS.roomUtilisation}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#1F2420" />
                   <XAxis
                     dataKey="name"
-                    stroke="#64748b"
+                    stroke="#777D78"
                     fontSize={10}
                     tickFormatter={(val) => val.split(' ')[0]}
                   />
-                  <YAxis stroke="#64748b" fontSize={10} domain={[0, 100]} />
+                  <YAxis stroke="#777D78" fontSize={10} domain={[0, 100]} />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#090E1A',
-                      borderColor: '#1E293B',
+                      backgroundColor: '#121614',
+                      borderColor: '#1F2420',
                       borderRadius: '12px',
                       fontSize: '12px',
-                      color: '#F8FAFC',
+                      color: '#FFFFFF',
                     }}
                   />
-                  <Bar dataKey="utilisation" fill="#6366F1" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="utilisation" fill="#B8F36B" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -414,26 +414,26 @@ export default function AdminCommandCenter() {
               <AreaChart data={ANALYTICS.weeklyLoad}>
                 <defs>
                   <linearGradient id="loadColor" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#6366F1" stopOpacity={0.4} />
-                    <stop offset="95%" stopColor="#0EA5E9" stopOpacity={0.0} />
+                    <stop offset="5%" stopColor="#B8F36B" stopOpacity={0.4} />
+                    <stop offset="95%" stopColor="#007A64" stopOpacity={0.0} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                <XAxis dataKey="day" stroke="#64748b" fontSize={11} />
-                <YAxis stroke="#64748b" fontSize={11} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#1F2420" />
+                <XAxis dataKey="day" stroke="#777D78" fontSize={11} />
+                <YAxis stroke="#777D78" fontSize={11} />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: '#090E1A',
-                    borderColor: '#1E293B',
+                    backgroundColor: '#121614',
+                    borderColor: '#1F2420',
                     borderRadius: '12px',
                     fontSize: '12px',
-                    color: '#F8FAFC',
+                    color: '#FFFFFF',
                   }}
                 />
                 <Area
                   type="monotone"
                   dataKey="sessions"
-                  stroke="#6366F1"
+                  stroke="#B8F36B"
                   strokeWidth={2.5}
                   fillOpacity={1}
                   fill="url(#loadColor)"
@@ -449,7 +449,7 @@ export default function AdminCommandCenter() {
             <h3 className="font-bold text-sm text-slate-100 mb-1">
               Curriculum Session Split
             </h3>
-            <p className="text-xs text-slate-400 mb-3">Lectures, Tutorials, Labs</p>
+            <p className="text-xs text-[#9AA19C] mb-3">Lectures, Tutorials, Labs</p>
 
             <div className="h-44 w-full">
               <ResponsiveContainer width="100%" height="100%">
@@ -467,10 +467,11 @@ export default function AdminCommandCenter() {
                   </Pie>
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#0f172a',
-                      borderColor: '#334155',
+                      backgroundColor: '#121614',
+                      borderColor: '#1F2420',
                       borderRadius: '8px',
                       fontSize: '12px',
+                      color: '#FFFFFF',
                     }}
                   />
                 </PieChart>

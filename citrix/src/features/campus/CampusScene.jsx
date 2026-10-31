@@ -233,14 +233,14 @@ function StylizedBuilding({ building, isSelected, isHovered, onSelect, onHover }
       {/* Plinth / Base Platform */}
       <mesh position={[0, 0.1, 0]} receiveShadow>
         <boxGeometry args={[width + 0.4, 0.2, depth + 0.4]} />
-        <meshStandardMaterial color="#334155" roughness={0.7} />
+        <meshStandardMaterial color="#1F2420" roughness={0.7} />
       </mesh>
 
       {/* Main Wall Core */}
       <mesh position={[0, height / 2 + 0.1, 0]} castShadow receiveShadow>
         <boxGeometry args={[width, height, depth]} />
         <meshStandardMaterial
-          color={isSelected ? '#2563EB' : isHovered ? '#3B82F6' : theme.wallColor}
+          color={isSelected ? '#B8F36B' : isHovered ? '#A6E854' : theme.wallColor}
           roughness={0.5}
         />
       </mesh>
@@ -390,17 +390,17 @@ function StylizedBuilding({ building, isSelected, isHovered, onSelect, onHover }
         <div
           className={`px-3 py-1.5 rounded-xl backdrop-blur-md text-center transition-all duration-300 shadow-xl ${
             isSelected
-              ? 'bg-indigo-600 text-white font-bold ring-2 ring-indigo-400 scale-110 shadow-indigo-500/50'
+              ? 'bg-[#B8F36B] text-[#101110] font-black ring-2 ring-[#B8F36B] scale-110 shadow-lg shadow-[#B8F36B]/40'
               : isHovered
-              ? 'bg-slate-900/95 text-cyan-300 font-semibold ring-1 ring-cyan-500/50 scale-105'
-              : 'bg-[#0B1120]/90 text-slate-200 border border-slate-700/80'
+              ? 'bg-[#121614] text-[#B8F36B] font-bold ring-1 ring-[#B8F36B]/50 scale-105'
+              : 'bg-[#080A09]/95 text-slate-200 border border-[#1F2420]'
           }`}
         >
           <div className="text-xs whitespace-nowrap font-bold flex items-center justify-center gap-1.5">
             <span>{building.icon}</span>
             <span>{building.shortName}</span>
           </div>
-          <div className="text-[10px] text-cyan-400 font-mono font-semibold mt-0.5">
+          <div className="text-[10px] text-[#B8F36B] font-mono font-semibold mt-0.5">
             {building.floors.length} {building.floors.length === 1 ? 'Floor' : 'Floors'}
           </div>
         </div>
@@ -429,16 +429,16 @@ export default function CampusScene({
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
-    <div className="w-full h-full relative cursor-grab active:cursor-grabbing bg-[#0F172A]">
+    <div className="w-full h-full relative cursor-grab active:cursor-grabbing bg-[#080A09]">
       <Canvas
         shadows
         camera={{ position: [10, 14, 16], fov: 40 }}
         className="w-full h-full"
       >
-        <color attach="background" args={['#0F172A']} />
+        <color attach="background" args={['#080A09']} />
         
         {/* Soft atmospheric distance fog that doesn't obscure buildings */}
-        <fog attach="fog" args={['#0F172A', 25, 60]} />
+        <fog attach="fog" args={['#080A09', 25, 60]} />
 
         {/* Crisp Architectural Studio Lighting for high visibility */}
         {/* Warm Sun / Key Light */}

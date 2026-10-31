@@ -336,7 +336,7 @@ export const DEMO_ACCOUNTS = [
     designation: 'Dean of Academic Affairs',
     dept: 'Administration',
     avatar: 'PM',
-    color: 'bg-blue-600',
+    color: 'bg-[#121614] border border-[#B8F36B]/60 text-[#B8F36B]',
   },
   {
     id: 'demo-coordinator',
@@ -346,7 +346,7 @@ export const DEMO_ACCOUNTS = [
     designation: 'Department Coordinator, CSE',
     dept: 'CSE',
     avatar: 'PS',
-    color: 'bg-teal-600',
+    color: 'bg-[#007A64] text-white',
   },
   {
     id: 'demo-faculty',
@@ -356,7 +356,7 @@ export const DEMO_ACCOUNTS = [
     designation: 'Professor, CSE',
     dept: 'CSE',
     avatar: 'RK',
-    color: 'bg-indigo-600',
+    color: 'bg-[#161B18] border border-[#1F2420] text-slate-200',
   },
   {
     id: 'demo-club',
@@ -366,7 +366,7 @@ export const DEMO_ACCOUNTS = [
     designation: 'Club Representative, Robotics Club',
     dept: 'CSE (3rd Year)',
     avatar: 'AM',
-    color: 'bg-purple-600',
+    color: 'bg-[#10B981] text-[#101110] font-black',
   },
 ];
 
@@ -388,9 +388,9 @@ export const ANALYTICS = {
     { day: 'Fri', sessions: 34, utilisation: 68 },
   ],
   sessionTypes: [
-    { name: 'Lecture', value: 120, color: '#3B82F6' },
-    { name: 'Tutorial', value: 35, color: '#14B8A6' },
-    { name: 'Lab', value: 34, color: '#8B5CF6' },
+    { name: 'Lecture', value: 120, color: '#B8F36B' },
+    { name: 'Tutorial', value: 35, color: '#007A64' },
+    { name: 'Lab', value: 34, color: '#10B981' },
   ],
   conflictTrend: [
     { week: 'Wk 40', conflicts: 3 },
@@ -400,10 +400,10 @@ export const ANALYTICS = {
     { week: 'Wk 44', conflicts: 0 },
   ],
   bookingsByRole: [
-    { role: 'Faculty', count: 45, color: '#6366F1' },
-    { role: 'Dept Coord', count: 28, color: '#14B8A6' },
-    { role: 'Club Rep', count: 62, color: '#8B5CF6' },
-    { role: 'Admin', count: 15, color: '#3B82F6' },
+    { role: 'Faculty', count: 45, color: '#B8F36B' },
+    { role: 'Dept Coord', count: 28, color: '#007A64' },
+    { role: 'Club Rep', count: 62, color: '#10B981' },
+    { role: 'Admin', count: 15, color: '#7FB33C' },
   ],
 };
 

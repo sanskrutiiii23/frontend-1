@@ -16,15 +16,15 @@ export default function CampusFallback({ onSelectBuilding, selectedBuilding }) {
   };
 
   return (
-    <div className="w-full h-full bg-[#080E1A] p-6 overflow-y-auto">
+    <div className="w-full h-full bg-[#080A09] p-6 overflow-y-auto">
       <div className="max-w-6xl mx-auto space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-800 gap-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-[#1F2420] gap-3">
           <div>
-            <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
-              <Building className="w-5 h-5 text-blue-400" />
+            <h3 className="text-lg font-bold text-white flex items-center gap-2">
+              <Building className="w-5 h-5 text-[#B8F36B]" />
               CIT Campus Building Directory (2D Plan)
             </h3>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-xs text-[#9AA19C] mt-0.5">
               Architectural campus grid view with live floor counts and room availability metrics
             </p>
           </div>
@@ -43,15 +43,15 @@ export default function CampusFallback({ onSelectBuilding, selectedBuilding }) {
               <div
                 key={b.id}
                 onClick={() => onSelectBuilding(b)}
-                className={`group relative bg-slate-900/90 border rounded-2xl p-5 cursor-pointer transition-all duration-200 flex flex-col justify-between ${
+                className={`group relative bg-[#121614] border rounded-2xl p-5 cursor-pointer transition-all duration-200 flex flex-col justify-between ${
                   isSelected
-                    ? 'border-blue-500 bg-slate-800/90 shadow-xl shadow-blue-500/10'
-                    : 'border-slate-800 hover:border-slate-700 hover:bg-slate-800/60'
+                    ? 'border-[#B8F36B] bg-[#161B18] shadow-xl shadow-[#B8F36B]/15'
+                    : 'border-[#1F2420] hover:border-[#B8F36B]/40 hover:bg-[#161B18]'
                 }`}
               >
                 <div>
                   <div className="flex items-start justify-between mb-3">
-                    <div className="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700/80 flex items-center justify-center text-2xl shadow-inner">
+                    <div className="w-12 h-12 rounded-xl bg-[#161B18] border border-[#1F2420] flex items-center justify-center text-2xl shadow-inner">
                       {b.icon}
                     </div>
                     <Badge variant={stats.available > 0 ? 'green' : 'amber'} size="sm">
@@ -59,30 +59,30 @@ export default function CampusFallback({ onSelectBuilding, selectedBuilding }) {
                     </Badge>
                   </div>
 
-                  <h4 className="text-base font-bold text-slate-100 group-hover:text-blue-400 transition-colors">
+                  <h4 className="text-base font-bold text-slate-100 group-hover:text-[#B8F36B] transition-colors">
                     {b.name}
                   </h4>
-                  <p className="text-xs text-slate-400 mt-1 line-clamp-2">
+                  <p className="text-xs text-[#9AA19C] mt-1 line-clamp-2">
                     {b.description}
                   </p>
 
-                  <div className="mt-4 pt-3 border-t border-slate-800/80 grid grid-cols-3 gap-2 text-center">
-                    <div className="bg-slate-800/50 rounded-lg p-2">
+                  <div className="mt-4 pt-3 border-t border-[#1F2420] grid grid-cols-3 gap-2 text-center">
+                    <div className="bg-[#161B18] border border-[#1F2420] rounded-lg p-2">
                       <div className="text-xs font-bold text-slate-200">{b.floors.length}</div>
-                      <div className="text-[10px] text-slate-400 uppercase">Floors</div>
+                      <div className="text-[10px] text-[#777D78] uppercase font-mono">Floors</div>
                     </div>
-                    <div className="bg-slate-800/50 rounded-lg p-2">
-                      <div className="text-xs font-bold text-emerald-400">{stats.total}</div>
-                      <div className="text-[10px] text-slate-400 uppercase">Rooms</div>
+                    <div className="bg-[#161B18] border border-[#1F2420] rounded-lg p-2">
+                      <div className="text-xs font-bold text-[#B8F36B]">{stats.total}</div>
+                      <div className="text-[10px] text-[#777D78] uppercase font-mono">Rooms</div>
                     </div>
-                    <div className="bg-slate-800/50 rounded-lg p-2">
-                      <div className="text-xs font-bold text-blue-400">{b.dept.split(',')[0]}</div>
-                      <div className="text-[10px] text-slate-400 uppercase">Dept</div>
+                    <div className="bg-[#161B18] border border-[#1F2420] rounded-lg p-2">
+                      <div className="text-xs font-bold text-[#10B981]">{b.dept.split(',')[0]}</div>
+                      <div className="text-[10px] text-[#777D78] uppercase font-mono">Dept</div>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs font-semibold text-blue-400 group-hover:text-blue-300">
+                <div className="mt-4 pt-3 border-t border-[#1F2420] flex items-center justify-between text-xs font-bold text-[#B8F36B] group-hover:text-[#A6E854]">
                   <span>Explore Floors & Classrooms</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>

@@ -10,10 +10,10 @@ import AppShell from "@/components/layout/AppShell";
 
 // ─── Spinner fallback ────────────────────────────────────────────────────────
 const PageSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-[#0B1120]">
+  <div className="flex items-center justify-center min-h-screen bg-[#080A09]">
     <div className="flex flex-col items-center gap-4">
-      <div className="w-12 h-12 rounded-full border-4 border-slate-700 border-t-blue-500 animate-spin" />
-      <p className="text-slate-400 text-sm tracking-wide">Loading…</p>
+      <div className="w-12 h-12 rounded-full border-4 border-[#1F2420] border-t-[#B8F36B] animate-spin" />
+      <p className="text-[#9AA19C] text-sm tracking-wide font-mono uppercase">CITRIX CampusOS Loading…</p>
     </div>
   </div>
 );
